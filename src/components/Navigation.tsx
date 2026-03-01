@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export type Page = 'home' | 'photos' | 'about' | 'design' | 'contact';
+export type Page = string;
 
 interface NavigationProps {
     currentPage: Page;

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { CreativeProjects } from '../components/sections/CreativeProjects';
 
-export function DesignPage() {
+export function DesignPage({ setPage }: { setPage: (page: string) => void }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export function DesignPage() {
         >
             <section id="design" className="section block-spacing">
                 <h2 className="section-title text-center" style={{ fontSize: '1.5rem', marginBottom: '4rem', letterSpacing: '0.1em' }}>CREATIVE DIRECTION</h2>
-                <CreativeProjects />
+                <CreativeProjects setPage={setPage} />
             </section>
         </motion.div>
     );

@@ -12,6 +12,12 @@ export function ContactPage() {
         >
             <h2 className="section-title text-center" style={{ fontSize: '1.5rem', marginBottom: '4rem', letterSpacing: '0.1em' }}>CONTACT</h2>
 
+            <img
+                src="https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=800&q=80"
+                alt="Contact Placeholder"
+                style={{ width: '100%', maxWidth: '400px', height: '300px', objectFit: 'cover', marginBottom: '3rem' }}
+            />
+
             <div style={{ textAlign: 'center', lineHeight: 2, fontFamily: 'var(--font-serif)', fontSize: '1.2rem', fontStyle: 'italic', opacity: 0.8 }}>
                 <p>For bookings and inquiries:</p>
                 <p style={{ marginTop: '1rem', fontWeight: 500 }}><a href="mailto:hello@mariadelmar.com" style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>hello@mariadelmar.com</a></p>

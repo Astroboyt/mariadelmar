@@ -10,7 +10,7 @@
     /* Warm editorial accent */
 
     /* Typography */
-    --font-sans: 'Ledger', Georgia, 'Times New Roman', serif;
+    --font-sans: 'MuseoModerno', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-serif: 'MuseoModerno', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
     /* Spacing */
@@ -499,7 +499,7 @@ html {
     max-height: 100%;
     object-fit: contain;
     pointer-events: none;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    /* Removed box-shadow */
 }
 
 .lightbox-counter {

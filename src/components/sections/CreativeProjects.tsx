@@ -7,7 +7,7 @@ const PROJECTS = [
     { id: 3, title: 'MET GALA 2025', image: 'https://iili.io/qqnOY9R.png' }
 ];
 
-function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
+function ProjectCard({ project, onClick }: { project: typeof PROJECTS[0], onClick: () => void }) {
     const ref = useRef<HTMLDivElement>(null);
 
     const x = useMotionValue(0);
@@ -44,6 +44,7 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
         <motion.div
             ref={ref}
             className="project-card"
+            onClick={onClick}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
@@ -64,11 +65,15 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
     );
 }
 
-export function CreativeProjects() {
+export function CreativeProjects({ setPage }: { setPage: (page: string) => void }) {
     return (
         <div className="projects-grid">
             {PROJECTS.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectCard
+                    key={project.id}
+                    project={project}
+                    onClick={() => setPage(`project:${project.id}`)}
+                />
             ))}
         </div>
     );

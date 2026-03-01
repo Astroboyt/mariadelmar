@@ -11,6 +11,11 @@ export function AboutPage() {
             style={{ paddingTop: '150px', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
         >
             <h2 className="section-title text-center" style={{ fontSize: '1.5rem', marginBottom: '4rem', letterSpacing: '0.1em' }}>ABOUT ME</h2>
+            <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                alt="Maria Del Mar"
+                style={{ width: '100%', maxWidth: '400px', height: '500px', objectFit: 'cover', marginBottom: '3rem' }}
+            />
             <div style={{ maxWidth: '600px', textAlign: 'center', lineHeight: 1.8, opacity: 0.8 }}>
                 <p>
                     I am Maria Del Mar, a fashion model and creative director currently based between New York and London.

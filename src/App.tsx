@@ -7,8 +7,10 @@ import { AboutPage } from './pages/AboutPage';
 import { DesignPage } from './pages/DesignPage';
 import { ContactPage } from './pages/ContactPage';
 
+import { ProjectPage } from './pages/ProjectPage';
+
 function App() {
-    const [currentPage, setCurrentPage] = useState<Page>('home');
+    const [currentPage, setCurrentPage] = useState<string>('home');
 
     return (
         <div className="app-container">
@@ -18,8 +20,9 @@ function App() {
                 {currentPage === 'home' && <Hero key="home" />}
                 {currentPage === 'photos' && <PhotosPage key="photos" />}
                 {currentPage === 'about' && <AboutPage key="about" />}
-                {currentPage === 'design' && <DesignPage key="design" />}
+                {currentPage === 'design' && <DesignPage key="design" setPage={setCurrentPage} />}
                 {currentPage === 'contact' && <ContactPage key="contact" />}
+                {currentPage.startsWith('project:') && <ProjectPage key="project" projectId={currentPage.split(':')[1]} setPage={setCurrentPage} />}
             </AnimatePresence>
         </div>
     );
